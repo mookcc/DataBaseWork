@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DataBaseWork</string>
+    <string name="name">姓名</string>
+    <string name="phone">电话</string>
+    <string name="sex">男</string>
+    <string name="wName">外号</string>
+</resources>
