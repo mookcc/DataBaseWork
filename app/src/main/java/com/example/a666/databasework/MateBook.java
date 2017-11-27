@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -29,6 +30,7 @@ public class MateBook extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
         setContentView(R.layout.schollmate_book);
+        TextView bt_back= (TextView) findViewById(R.id.back);
         myOpenHelper = new MyOpenhelper(this, "BookStore.db", null, 1);
         SQLiteDatabase db = myOpenHelper.getWritableDatabase();
         Cursor cursor = db.query("BookStore", null, null, null, null, null, null);
@@ -90,7 +92,6 @@ public class MateBook extends AppCompatActivity {
             tv_wName.setText(book.getwName());
             tv_phone.setText(book.getPhoneNumber());
             tv_sex.setText(book.getSex());
-
 
             return view1;
         }
